@@ -42,15 +42,90 @@ body {
         width: 50px; }
       .header nav .header__logo:hover {
         border: none; }
-    .header nav .header-active {
-      display: block; }
-    .header nav .header-hide {
-      display: none; }
+    .header nav .menu-mob {
+      display: none;
+      cursor: pointer;
+      height: 16px; }
+      .header nav .menu-mob i {
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        -webkit-border-radius: 2px;
+                border-radius: 2px; }
+        .header nav .menu-mob i:before, .header nav .menu-mob i:after {
+          -webkit-border-radius: 2px;
+                  border-radius: 2px;
+          content: '';
+          display: block;
+          width: inherit;
+          height: inherit;
+          background-color: inherit;
+          position: absolute; }
+        .header nav .menu-mob i:before {
+          bottom: -10px; }
+        .header nav .menu-mob i:after {
+          bottom: -5px; }
+      .header nav .menu-mob .overflow__menu {
+        outline: none;
+        cursor: auto;
+        right: 8px;
+        top: 52px;
+        border: 1px solid #D8D8D8;
+        padding: 9px 0 6px 0;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        z-index: 11;
+        background-color: #fff;
+        min-width: 180px;
+        position: absolute;
+        display: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-transition: .5s;
+        transition: .5s; }
+        .header nav .menu-mob .overflow__menu a {
+          font-weight: 600;
+          -webkit-transition: .5s;
+          transition: .5s;
+          font-size: 20px;
+          line-height: 17px;
+          color: #152935;
+          padding: 7px 16px 6px 16px;
+          display: block;
+          margin: 0; }
+          .header nav .menu-mob .overflow__menu a:hover {
+            color: #fff;
+            background-color: rgba(25, 25, 112, 0.8); }
+        .header nav .menu-mob .overflow__menu:after {
+          position: absolute;
+          top: -7px;
+          right: 24px;
+          content: '';
+          width: 12px;
+          height: 12px;
+          border: 1px solid #D8D8D8;
+          border-right: none;
+          background-color: #fff;
+          border-bottom: none;
+          z-index: 10;
+          -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+                  transform: rotate(45deg); }
+      .header nav .menu-mob .overflow__menu-open {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
 
 .title {
   background: url(../img/title__background.png) center no-repeat;
   background-size: cover;
-  padding: 300px 100px 40px 100px;
+  padding: 250px 100px 40px 100px;
   color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -65,13 +140,16 @@ body {
     display: inline-block;
     padding: 40px;
     text-align: right;
-    font-size: 70px;
+    font-size: 80px;
     margin-bottom: 250px; }
   .title p {
     font-weight: 600;
     margin: auto;
     text-align: center;
-    font-size: 30px; }
+    font-size: 40px; }
+    .title p b {
+      font-weight: 100;
+      font-family: 'Open Sans', sans-serif; }
 
 .goal h2 {
   color: #000;
@@ -85,6 +163,9 @@ body {
   padding: 50px;
   background: url(../img/goal__background.png) center no-repeat;
   background-size: cover; }
+  .goal .goal__wrap b {
+    font-weight: 100;
+    font-family: 'Open Sans', sans-serif; }
   .goal .goal__wrap p {
     text-shadow: 0px 0px 10px black;
     display: inline-block;
@@ -276,6 +357,7 @@ body {
             -ms-flex-align: center;
                 align-items: center; }
         .lineup .lineup__wrap .lineup__day .lineup__time span {
+          font-size: 20px;
           margin-right: 20px;
           font-weight: 600;
           background-color: #fff;
@@ -284,6 +366,7 @@ body {
           -webkit-border-radius: 50%;
                   border-radius: 50%; }
         .lineup .lineup__wrap .lineup__day .lineup__time p {
+          font-size: 20px;
           color: #fff;
           font-weight: 600; }
 
@@ -301,6 +384,9 @@ body {
     padding: 20px 200px;
     text-align: center;
     color: #fff; }
+    .support__text b {
+      font-weight: 100;
+      font-family: 'Open Sans', sans-serif; }
     .support__text span, .support__text p {
       display: block;
       margin-bottom: 20px;
@@ -340,3 +426,145 @@ body {
     font-size: 30px;
     text-align: center;
     background-color: #fff; }
+    .support h4 b {
+      font-weight: 100;
+      font-family: 'Open Sans', sans-serif; }
+
+@media screen and (max-width: 900px) {
+  .header nav a {
+    margin: 0 10px; }
+  .header nav .header__logo {
+    display: block; }
+  .title {
+    padding: 250px 50px 40px 50px; }
+    .title h1 {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 150px; }
+    .title p {
+      font-size: 30px; }
+  .goal h2 {
+    color: #000;
+    padding: 20px 0;
+    font-size: 30px;
+    text-align: center;
+    background-color: #fff; }
+  .goal .goal__wrap {
+    padding: 25px; }
+    .goal .goal__wrap p {
+      font-size: 30px; }
+    .goal .goal__wrap a {
+      font-size: 27px; }
+  .support__text {
+    padding: 20px 20px; } }
+
+@media screen and (max-width: 600px) {
+  .header nav a {
+    display: none;
+    margin: 0 20px; }
+  .header nav .menu-mob {
+    display: block; }
+  .title {
+    padding: 150px 20px 40px 20px; }
+    .title h1 {
+      font-size: 30px;
+      margin-bottom: 100px; }
+    .title p {
+      font-size: 20px; }
+  .goal h2 {
+    padding: 10px 0;
+    font-size: 25px; }
+  .goal .goal__wrap {
+    padding: 20px; }
+    .goal .goal__wrap p {
+      font-size: 20px; }
+    .goal .goal__wrap a {
+      margin-top: 20px;
+      font-size: 25px; }
+  .photos h2 {
+    padding: 10px 0;
+    font-size: 25px; }
+  .photos .photos__wrap .slider__pagination {
+    bottom: 10px;
+    width: 195px; }
+    .photos .photos__wrap .slider__pagination span {
+      margin-right: 5px;
+      width: 15px;
+      height: 15px; }
+  .photos .photos__wrap .slider__prev {
+    left: 20px; }
+  .photos .photos__wrap .slider__next {
+    right: 20px; }
+  .photos .photos__wrap .slider__pagination, .photos .photos__wrap .slider__prev, .photos .photos__wrap .slider__next {
+    opacity: 1; }
+  .lineup h2 {
+    padding: 10px 0;
+    font-size: 25px; }
+  .lineup .lineup__wrap .lineup__day {
+    width: auto;
+    padding-left: 10px; }
+    .lineup .lineup__wrap .lineup__day h3 {
+      font-size: 20px; }
+    .lineup .lineup__wrap .lineup__day .lineup__time {
+      margin-bottom: 10px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .lineup .lineup__wrap .lineup__day .lineup__time span {
+        margin-top: 10px;
+        font-size: 15px;
+        margin-right: 0px;
+        padding: 15px; }
+      .lineup .lineup__wrap .lineup__day .lineup__time p {
+        color: #fff;
+        font-weight: 600; }
+  .support h3 {
+    padding: 10px 0;
+    font-size: 25px; }
+  .support__text span, .support__text p {
+    margin-bottom: 10px;
+    font-size: 20px; }
+  .support__contacts {
+    font-size: 20px;
+    padding: 10px; }
+  .support h4 {
+    padding: 15px 0;
+    font-size: 25px; } }
+
+@media screen and (max-width: 370px) {
+  .header nav .menu-mob .overflow__menu {
+    min-width: 140px; }
+    .header nav .menu-mob .overflow__menu a {
+      font-size: 15px;
+      padding: 5px 10px; }
+  .title {
+    padding-left: 0;
+    padding-right: 0; }
+    .title h1 {
+      width: 100%;
+      padding: 10px 10px;
+      font-size: 25px;
+      margin-bottom: 70px; }
+    .title p {
+      font-size: 22px;
+      padding: 0 10px; }
+  .goal .goal__wrap {
+    padding: 15px; }
+    .goal .goal__wrap p {
+      font-size: 17px; }
+    .goal .goal__wrap a {
+      margin-top: 0px;
+      font-size: 20px; }
+  .photos .photos__wrap .slider__pagination {
+    width: 146px; }
+    .photos .photos__wrap .slider__pagination span {
+      width: 10px;
+      height: 10px; }
+  .photos .photos__wrap .slider__prev {
+    left: 5px; }
+  .photos .photos__wrap .slider__next {
+    right: 5px; }
+  .lineup .lineup__wrap .lineup__day .lineup__time p {
+    font-size: 17px; } }
